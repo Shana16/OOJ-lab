@@ -1,0 +1,43 @@
+import java.util.Scanner;
+class Book{
+String name,author;
+double price;
+int num_pages;
+
+
+void set_details() 
+
+{ Scanner m=new Scanner(System.in);
+
+System.out.println("Enter name ,author,price,no of pages of book ");
+name=m.next();
+author=m.next();
+price=m.nextDouble();
+num_pages=m.nextInt();
+}
+void display()
+{
+
+System.out.println(name+" "+author+" "+price+" "+num_pages);
+
+}
+}//class
+
+
+class Objarr{
+public static void main(String args[])
+{
+ int nb;
+Scanner s=new Scanner(System.in);
+System.out.println("Enter no of books ");
+nb=s.nextInt();
+Book b[]=new Book[nb];
+for(int k=0;k<nb;k++)
+b[k]=new Book();
+for(int e=0;e<nb;e++)
+b[e].set_details();
+System.out.println("DETAILSSS:");
+for(int l=0;l<nb;l++)
+b[l].display();
+}//main
+}//class
